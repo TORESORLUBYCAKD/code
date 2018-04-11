@@ -1,0 +1,46 @@
+leetcode 300
+维护一个数组记录上升子序列L，遍历原数组的每一个元素。
+每当遍历到一个新元素a时，找L中第一个比a大的元素，若存在比a大的元素b，则用a替换b；若不存在，将a加入到L的末尾。
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        vector<int> dp;
+        for (int i = 0; i < nums.size(); ++i){
+
+            int lo = 0, hi = dp.size();
+            while (lo < hi){
+                int mi = (lo + hi)/2;
+                if (dp[mi] < nums[i]) lo = mi + 1;
+                else hi = mi;
+            }
+            if (hi == dp.size())
+                dp.push_back(nums[i]);
+            else dp[hi] = nums[i];
+        }
+        return dp.size();
+    }
+};
+
+class Solution{
+public:
+    int lengthOfLIS(vector<int>& nums){
+        vector<int> dp;
+        for (int i = 0; i < nums.size(); ++i){
+            auto it = lower_bound(dp.begin(), dp.end(), nums[i]);
+            if (it == dp.end())
+                dp.push_back(nums[i]);
+            else
+                *it = nums[i];
+        }
+        return dp.size();
+    }
+};
+
+样例：3 2 4 1 7 6
+数组L的生成过程为：
+3
+2
+2 4
+1 4
+1 4 7
+1 4 6

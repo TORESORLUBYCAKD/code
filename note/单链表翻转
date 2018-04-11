@@ -1,0 +1,32 @@
+单链表翻转
+从前往后遍历原链表，开一个新的链表，每次指针指向前一个元素，实现将原链表翻转的目的。
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* reverseList(struct ListNode* head) {
+    if (head == NULL) {
+        return NULL;
+    }
+
+    struct ListNode* new_list = NULL;
+
+    while (head != NULL) {
+        struct ListNode* elem = head;
+        head = head->next;
+
+        elem->next = new_list;
+        new_list = elem;
+    }
+
+    return new_list;
+}
+
+作者：蓝色
+链接：https://www.zhihu.com/question/30539385/answer/48568395
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

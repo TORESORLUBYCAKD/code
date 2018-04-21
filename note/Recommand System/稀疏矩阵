@@ -1,0 +1,18 @@
+稀疏矩阵Compressed Row Storage存储格式：
+https://blog.csdn.net/bigpiglet_zju/article/details/20791881
+
+稀疏矩阵(Sparse Matrix)由于有很多0，为了节省空间，一般压缩存储。通常只需要保存非零元素及其位置即可。
+
+        下面介绍Compressed Row Storage(CRS)格式或者称为 Compressed sparse row(CSR)格式，
+由名称可见，该格式是把行的信息压缩存储了，只显式保留每行第一个非零元素的位置，具体在例子中可以看到。
+
+        假设有稀疏矩阵A，我们需要创建三个数组，一个浮点型数组val，另外两个为整型数组（col_ind, row_ptr）。
+
+        val数组，大小为矩阵A的非零元素的个数，保存矩阵A的非零元素（按从上往下，从左往右的行遍历方式访问元素）。
+        col_ind数组，和val数组一样，大小为矩阵A的非零元素的个数，保存val数组中元素的列索引。其数学表示为：
+                          如果val(k)=a(i,j)，则col_ind(k)=j。
+        row_ptr数组，大小为矩阵A的行数，保存矩阵A的每行第一个非零元素在val中的索引。其数学表示为：
+                          如果val(k)=a(i,j)，则row_ptr(i)<= k < row_ptr(i+1)。
+        按照惯例，一般定义row_ptr(n+1) = nnz + 1,而nnz是A中非零元素的个数。
+
+        该方法可以节省很多空间，只需要2nnz + n + 1个存储单元，而不是n的平方个单元。

@@ -9,3 +9,4 @@ SGD计算过程示例：https://www.cnblogs.com/hxsyl/p/5231093.html
    同时提到用图计算，避免重复迭代，实现加速梯度下降。
 HogWild利用SGD互不影响的特性，在并行计算中放弃使用锁，大大提高了并行的效率。
    http://joyceho.github.io/cs584_s16/slides/hogwild-4.pdf
+梯度下降优化算法综述：http://www.raincent.com/content-85-7948-1.html

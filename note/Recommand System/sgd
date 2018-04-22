@@ -3,4 +3,9 @@
 比如评分预测问题中，有的用户评分多，有的用户评分少，因此整个评分矩阵是imbalanced的。
   针对问题①，作者提出了partial random method：即更新块的选择是随机，而块内的更新是有序的。同时为了增加随机性，算法将评分矩阵分成了比（s+1）×（s+1）更多的块。
   针对问题②，作者提出给空闲线程分配任务的方法：将整个矩阵分成（s+1）×（s+1）块，让s个线程同时执行。这样一个线程处理完一个block之后，必定有其他的block是free的（free是指不与其他线程处理的block共享用户或物品feature向量）。
-算法则为其分配更新次数最少的free block——为了使所有block的更新次数都差不多。论文显示，这样的方法使DoI在a few iteration之接近zero
+算法则为其分配更新次数最少的free block——为了使所有block的更新次数都差不多。论文显示，这样的方法使DoI在a few iteration之接近zero。
+
+SGD计算过程示例：https://www.cnblogs.com/hxsyl/p/5231093.html
+   同时提到用图计算，避免重复迭代，实现加速梯度下降。
+HogWild利用SGD互不影响的特性，在并行计算中放弃使用锁，大大提高了并行的效率。
+   http://joyceho.github.io/cs584_s16/slides/hogwild-4.pdf

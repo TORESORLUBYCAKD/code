@@ -1,3 +1,4 @@
+如何使基于梯度下降的机器学习并行化:https://blog.csdn.net/u013524655/article/details/41291533
 以往的SGD并行化算法面临两个问题：①缓存命中率低和②等待问题。
   首先，缓存命中率低是由算法内在的随机选取引起的。而等待问题是由数据的imbalance引起的。
 比如评分预测问题中，有的用户评分多，有的用户评分少，因此整个评分矩阵是imbalanced的。
@@ -10,3 +11,6 @@ SGD计算过程示例：https://www.cnblogs.com/hxsyl/p/5231093.html
 HogWild利用SGD互不影响的特性，在并行计算中放弃使用锁，大大提高了并行的效率。
    http://joyceho.github.io/cs584_s16/slides/hogwild-4.pdf
 梯度下降优化算法综述：http://www.raincent.com/content-85-7948-1.html
+
+在多核系统中，异步随机梯度下降算法可利用多线程和共享内存技术加以实现；
+在分布式集群环境中，可利用Master/slave架构设计和消息通信技术进行实现。

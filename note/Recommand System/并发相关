@@ -1,0 +1,4 @@
+
+HashMap在并发修改的时候，可能是导致循环链表的构成，
+就用ConcurrentHashMap，正如他的名字一样，他是一个线程安全的HashMap，这样能轻松解决问题。
+参考：https://blog.csdn.net/u013905744/article/details/50651767

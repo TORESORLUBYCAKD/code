@@ -14,3 +14,7 @@ ExecutorService的execute和submit方法
 那么就需要用到submit，通过捕获Future.get抛出的异常。
 https://blog.csdn.net/peachpi/article/details/6771946
 https://blog.csdn.net/ryantotti/article/details/6956175
+
+并行与多线程的区别
+   多线程是实现并行的一种最常见的手段。如果线程之间的任务是相互独立的，就可将其执行过程视为并行的。
+   可以使用Executor将串行循环转化为并行循环。

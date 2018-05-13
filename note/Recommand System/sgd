@@ -32,3 +32,6 @@ CPU-GPU协同加速实现并行化：《基于CPU_GPU的条件随机场并行化
 
 caffe2并行化SGD:https://caffe2.ai/docs/SynchronousSGD.html
 https://www.zhihu.com/question/269346510
+
+
+基于矩阵分解的SGD实现，参考：http://www.voidcn.com/article/p-zybjtduq-bcy.html

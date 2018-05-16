@@ -1,0 +1,13 @@
+ajax一般形式：
+
+$.ajax({
+   url:"",
+   data:{
+   },
+   type:"",
+   success:function(val){
+   }
+})
+
+ajax实现原理是xmlrequest。
+其中url，data,type,success都是ajax这个方法的参数，function是这个方法的返回值，val是url的返回值。

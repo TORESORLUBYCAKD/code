@@ -9,7 +9,8 @@ http://hihocoder.com/hiho/past
 0007
 0008
 0009
-0010
+0010  *二叉树遍历，递归（根据二叉树的前序和中序，输出后序）
+      https://www.cnblogs.com/pinxiong/p/4077900.html
 0011
 0012
 0013

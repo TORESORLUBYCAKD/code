@@ -1,3 +1,5 @@
 pagerank计算facebook数据示例：
 https://blog.csdn.net/coralime/article/details/51602459
 
+数据集格式以movielens 100K为例，第一行添加矩阵的实际行数、实际列数、数据条目数，条目内用空格分隔；
+

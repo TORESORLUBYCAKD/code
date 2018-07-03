@@ -1,0 +1,8 @@
+第一课
+    课程目标：Hadoop、MapReduce、HDFS、pig、Hbase、Hive
+    实验环境：Hadoop 0.20.2(版本之间差异比较大)
+    Hadoop思想源于Google，不使用超级计算机、降低单机存储，（淘宝去i、去e、去o）
+        
+第二课
+    Google的数据分布存储在各个单机的内存中；
+    Google搜索算法：倒排索引（标出某个关键字在某个网页中的位置）

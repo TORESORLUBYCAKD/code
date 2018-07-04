@@ -50,7 +50,37 @@
         配置master、slaves文件，设置master和slaves节点；
         向各节点复制hadoop；
         启动守护进程，检测守护进程启动情况；
-        
+
+第七课
+    Hadoop集群简单测试；
+
+第二十四课
+    Pig可以看做Hadoop的客户端，可以连接到Hadoop集群进行数据分析工作；
+    Pig方便不熟悉Java的用户，使用一种较为简便的类似于SQL的面向数据流的语言PigLatin进行数据处理；
+    Pig Latin可以进行排序、过滤、求和、分组、关联等常用操作，还可以自定义函数，是一种面向数据分析处理的轻量级脚本语言；
+    Pig可以看做是Pig Latin（SQL）到MapReduce的映射器；
+    Pig安装配置；
+
+第二十五课
+
+
+第二十九课
+    Hadoop与关系型数据库之间的数据交换；
+    数据导入导出方式：jdbc，Sqoop等；
+    Sqoop作用是关系型数据库与HDFS之间数据导入导出；
+    Hadoop下使用Sqoop；
+    
+第三十课
+    Hadoop数据集成方案；
+    Oracle HDFS直接连接器实验；
+    
+第三十一课
+    Oracle Hadoop装载程序；
+    装载Hadoop文件到数据库；
+    
+第三十二课
+    通过Thrift跨语言连接Hbase；
+    
 第三十三、三十四课
     Hadoop集群搭建注意事项
     《Linux鸟哥私房菜》
@@ -71,6 +101,27 @@
 第三十八课
     Hadoop适用场景：离线数据分析、遇到存储瓶颈时低成本提升集群性能；
     
- 第三十九课
-     Hadoop集群在互联网企业中的应用
+第三十九课
+    Hadoop集群在互联网企业中的应用
         京东：分析用户点击数据；
+        
+第四十课
+    Hadoop在淘宝和支付宝的应用；
+    不用IBM设备,不用Oracle,不用EMC存储；
+    改进NameNode单点问题，增加安全性，改善Hbase的稳定性，改进反哺Hadoop社区；
+     
+第四十一课
+    淘宝的数据产品：数据魔方、量子恒道；
+     
+第四十二课
+    Hadoop集群在百度中的应用；
+      
+第四十三课  
+    Hadoop完全分布式集群安装演示；
+      
+第四十四课
+    Hbase分布式安装演示；
+      
+      
+  
+  

@@ -1,0 +1,23 @@
+    Spring发展过程中随着边界的不断扩展，需要的配置越来越多，使用起来也越来越复杂，慢慢变成了一个大而全的框架，背离了它简洁开发的理念。
+这个时候微服务的概念慢慢兴起，Spring站在这么一个高度上开发了一个全新的技术栈：Spring Boot；
+    
+    Spring Boot核心功能：
+    1、独立运行的Spring项目：可以以jar包形式独立运行，通过java -jar xx.jar即可运行；
+    2、内嵌Servlet容器：可以选择内嵌Tomcat、Jetty等；
+    3、提供starter简化maven配置：一个maven项目，使用了spring-boot-starter-web时，会自动加载Spring Boot的依赖包；
+    4、自动配置Sping：Spring Boot会根据在类路径中的Jar包、类，为jar包中的类自动配置Bean；
+    5、准生产的应用监控：提供基于http、ssh、telnet对运行时的项目进行监控；
+    6、无代码生成和xml配置：主要通过条件注解来实现；
+    
+    约定大于配置；
+    热部署使得在修改代码后不用重启；
+    
+    Spring Boot搭建Web
+      1、用官方网站例子搭建；
+      2、使用STS（Spring Tool Suite）插件搭建；
+      3、Spring Boot CLI工具，使用命令创建；
+      4、手工构建Maven项目；
+    Spring Boot对web的支持：对json、参数、参数校验、自定义过滤器的支持
+    Mockmvc测试
+    
+（58-70分钟后就是广告）

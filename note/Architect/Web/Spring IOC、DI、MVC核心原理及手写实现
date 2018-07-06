@@ -1,0 +1,13 @@
+没有Spring会导致有大量的Servlet，管理起来困难；
+
+配置阶段
+  配置web.xml
+  配置Action 
+      实现注解用：Target({ElementType.*})、Retention、Document；
+      
+初始化阶段
+  加载配置文件；
+  扫描到所有相关的类；
+  初始化所有相关的类；
+  实现自动化依赖注入；
+  初始化HandlerMapping；

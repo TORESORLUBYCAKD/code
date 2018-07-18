@@ -30,3 +30,21 @@ Dubbo开源现状与未来规划
        Dubbo生态扩展；
        互通：解决自身服务查询、治理、API文档、测试等问题；
              服务注册、服务安全等与标准对接；
+
+Dubbo Cloud Native实践与思考
+    Cloud Native基础设施
+       服务发现、负载均衡、服务网关、分布式配置（Apollo）、服务熔断、跟踪监控；
+       服务发现：Zookeeper、Redis、Eureka、Consul、Curator;
+       负载均衡：Kong(网关)、Ribbon（没有权重；一致性哈希、轮询、随机）、Dubbo；
+       服务网关：OpenResty、Zuul、Spring Cloud Gateway、envoy；
+       分布式配置：Zookeeper、git（Spring Cloud的默认实现）、etcd、Consul、JDBC；
+       服务熔断：Dubbo、Kong、Hystrix；
+       链路跟踪：ZIPKIN、OpenTracing、Jaeger；
+       服务监控：OpenTSDB、HBase、Prometheus（普罗米修斯）、Grafana、elastic；
+    Cloud Native架构选型
+    Dubbo Cloud Native准备
+        注解驱动：对Spring、Spring Cloud友好；
+        外部化配置：配置写在代码里面；
+        Reactive：异步非阻塞的响应式编程提升应用伸缩性，单位时间内处理更多的东西；
+        REST：（用REST的例子包括实现前后端分离）融入微服务架构体系；
+        

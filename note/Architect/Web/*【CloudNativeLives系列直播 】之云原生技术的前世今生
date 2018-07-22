@@ -1,0 +1,96 @@
+CNCF云原生介绍
+  云原生计算基金会
+  云原生技术有利于各组织在公有云、私有云和混合云等新型动态环境中，构建和运行可弹性扩展的应用。云原生的代表技术包括容器、服务网格、微服务、不可变基础设施、
+  声明式API；
+  这些技术能够构建容错性好、易于管理和便于观察的松耦合系统。结合可靠的自动化手段，云原生技术使工程师能够轻松地对系统频繁地作出可预测的重大变更。
+  
+  “云”中地资源在使用者看来是可以无限扩展的，并且可以随时获取，按需使用，随时扩展，按使用付费。这种特性被称为像水电一样使用基础设施。
+
+  传统云计算Iaas
+  2000 非虚拟化硬件
+  2001 Vmware虚拟化技术
+  2006 AWS推出EC2服务
+  2010 OpenStack社区成立
+  2011.04 第一个开源Paas平台CloudFoundry发布
+  新兴云计算Paas/Caas
+  2013.03 开源Docker发布
+  2014.06 Google发布Kubernetes开源项目
+  2015.07 Google宣布成立CNCF基金会
+  
+  容器是云原生技术发展的第一波热潮
+      Kubernetes成为容器编排事实标准
+      Service Mesh成为微服务的新热点
+      Serverless在公有云应用渐宽
+  容器服务的目标就是打造Cloud Native应用的运行环境
+  
+  CNCF当前项目介绍
+      容器编排：Kubernetes、Helm；
+      容器引擎：Containerd、Rocket；
+      容器镜像仓库：Notary、TUF；
+      容器网络：CNI；
+      服务网格&服务发现：CoreDNS、Linkerd、Envoy；
+      容器监控运维：Prometheus、Fluentd、Jaeger、Open Tracing；
+      消息通信：GPRC、NATS；
+      数据库：Vitness；
+      SandBox项目：Rook、SPIFFE、SPIRE、Open Policy Agent、CloudEvents、Telepresence；
+
+容器技术发展介绍
+    容器虚拟化（LXC）：提供应用隔离运行的能力；
+    Docker：基于容器提供统一的应用分发平台；
+    2001年早期轻量级虚拟化产品如OpenVZ、Linux-Vserver当时主要用于VPS，均未进入Linux内核；
+    2007年随着cgroup以及namespace合入内核，Linux容器技术得到Linux内核主线的支持；
+    2008年LXC开源项目成立，实现用户态容器管理工具；容器技术在业界的使用越来越广泛；
+    2013年3月份docker出现，针对容器虚拟化更理想的统一平台出现；
+    2018年，Kata容器合并RunV和Intel Clear Container，Google发布gVisor容器；
+    
+    容器的三大好处：资源隔离和利用率提升、秒级弹性、环境一致性简化交付；
+    容器底层关键技术：Linux Cgroup、NameSpace、联合文件系统
+        Docker使用Linux Cgroup技术来实现容器实例的资源管理；
+        Docker使用Linux Namespace技术来实现容器实例间的资源隔离；
+        联合文件系统：一个基于文件的接口，通过把一组目录交错起来，形成一个单一视图；
+    新一代Kata容器实现多租户容器强隔离；
+    
+Kuberneters技术架构（K8S） 
+    Kubernetes是用于自动部署、扩展和管理容器化应用程序的开源系统；
+        生产级别的容器编排系统、数据中心OS、新生代云平台（传统云平台以虚拟机为中心构建，新生代云平台以容器为中心构建）
+    Kubernetes系统组件分为master和nodes两种角宿
+        master包括apiserver、etcd（存储）、controllers（控制）、scheduler（调度）;
+        nodes包括kubelet（管理容器生命周期）、kube-proxy（负载均衡）、add-ons（插件）、container runtime（docker）；        
+    申明式API能保证最终集群中的状态满足最初stack中的状态，比命令式API更能解决中断、故障等问题；
+    Kubernetes基于list-watch机制的控制器架构（运行流程）
+    Kubernetes架构分层：内核层、应用层、治理层、接口层、生态系统；
+    
+    有性能提升要求的需要拆分成微服务的庞大的系统，适合迁移到Kubernetes上；
+
+Kuberbetes Pod详解
+    Kubernetes把业界的一些应用抽象可以成模型对象；
+        模型对象包括：Pod（能够创建、调度和管理的最小部署单元）、Service（一个Pod的逻辑集合和访问这个集合的策略）、Deployment（无状态工作负载）、StatefulSet（有状态工作负载）；
+        功能组件包括master和nodes；
+        功能特性包括：Pod调度（通过Schedule）、部署启动（通过CRI）、运行监控（通过IcAgent）、服务发现（通过环境变量和DNS）、升级运维（通过Controllers）、扩容缩容(通过Controllers)；
+    Pods是一组容器的集合，这组容器共享网络命名空间、IP地址及端口空间；
+    从生命周期来看，Pod是短暂的而不是长久的应用。Pods被调度到节点，保持在这个节点上直到被销毁；
+    Pod的容器分为三类：基础容器、初始化容器、业务容器
+        Infrastructure Container 基础容器
+            用户不可见，无需感知，维护整个Pod网络空间；
+        InitContainers 初始化容器
+            一般用于服务等待处理及注册Pod信息等
+            先于业务容器开始执行，顺序执行，执行成功退出（exit0）,全部执行成功后开始启动业务容器；
+        Container 业务容器
+            并行启动，启动成功后一直Running；
+     容器的基本组成包括三部分：镜像部分、启动命令、计算资源
+         镜像部分
+             镜像地址和拉去策略
+             拉取镜像的认证凭据
+         启动命令
+             command:替换docker容器的entrypoint
+             args:作为docker容器entrypoint的入参
+         计算资源
+             请求值：调度依据
+             限制值：容器最大能使用的规格
+     健康检查：分命令行方式、httpGet请求方式以及TCPSocket方式
+         业务探针 探测不正常后，不会重启容器，只会拿掉服务后端的endpoints
+         存活探针 探测不正常后，重启容器
+     Pod可以接收的外部输入方式：环境变量、配置文件以及密钥；    
+Kubernetes工作负载与服务介绍
+
+快速部署第一个容器应用

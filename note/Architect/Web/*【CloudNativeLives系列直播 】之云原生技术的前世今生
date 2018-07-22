@@ -91,6 +91,27 @@ Kuberbetes Pod详解
          业务探针 探测不正常后，不会重启容器，只会拿掉服务后端的endpoints
          存活探针 探测不正常后，重启容器
      Pod可以接收的外部输入方式：环境变量、配置文件以及密钥；    
+     Pod持久化存储
+         主机hostpath：必须要求Pod调度到固定节点上
+         云存储：不用担心Pod迁移
+     持久化存储流程：创建PVC->设置到Pod->通过PVC找到PV->调度Pod到合适的节点->根据PV挂载存储到容器
+     Pod服务域名发现：Pod内域名解析策略
+         ClusterFirst:使用kube-dns作为域名解析服务器；
+         Default：使用节点(kubelet)指定的域名服务器解析域名；
+         ClusterFirstWithHostNet:当Pod使用主机网络部署时使用；
 Kubernetes工作负载与服务介绍
-
+    Pod与工作负载通过label-selector相关联
+    关键工作负载
+      Replica Set扩容缩容
+      Deployment Set、StatefulSet 
+      DaemonSet适用于监听节点数据
+      Job一次性执行
+    关键概念CustomResourceDefinition，用户可自定义资源模型，可扩展性强（需要自己实现controller）；
+    通过服务实现Pod的负载均衡能力
+      Service：实现TCP/UDP 4层负载均衡能力，包括ClusterIP（内网）、NodePort（与内网相连）、LoadBalancer（从公网访问进来）三种类型
+      Ingress：实现HTTP 7层负载均衡能力，基于service实现7层路由转发
+      
 快速部署第一个容器应用
+    （命令演示）
+    
+    

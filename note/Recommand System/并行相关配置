@@ -1,0 +1,6 @@
+
+Hadoop安装配置：
+Ubuntu16.04下Hadoop的本地安装与配置: https://www.cnblogs.com/sench/p/8542175.html
+hbase集群在启动的时候报错：JAVA_HOME is not set and Java could not be found:
+   https://blog.csdn.net/believe__sss/article/details/78813278
+Ubuntu 16.04安装JDK: https://www.linuxidc.com/Linux/2017-06/144732.htm

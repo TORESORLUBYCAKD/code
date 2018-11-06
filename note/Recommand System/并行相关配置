@@ -4,3 +4,13 @@ Ubuntu16.04下Hadoop的本地安装与配置: https://www.cnblogs.com/sench/p/85
 hbase集群在启动的时候报错：JAVA_HOME is not set and Java could not be found:
    https://blog.csdn.net/believe__sss/article/details/78813278
 Ubuntu 16.04安装JDK: https://www.linuxidc.com/Linux/2017-06/144732.htm
+
+
+文件上传到hdfs: https://www.cnblogs.com/zhaosk/p/4391294.html
+   [hadoop@localhost hadoop-2.5.2]$ hadoop fs -put ~/Desktop/input1.txt /
+   [hadoop@localhost hadoop-2.5.2]$ hadoop fs -text /input1.txt     --查看上传后的文件内容
+   
+127.0.1.1 to 0.0.0.0:10020 failed on connection exception:
+   hadoop的historyserver服务没有启动:https://blog.csdn.net/u014662563/article/details/72356417
+   sbin/mr-jobhistory-daemon.sh start historyserver
+   

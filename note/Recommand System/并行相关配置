@@ -12,5 +12,6 @@ Ubuntu 16.04安装JDK: https://www.linuxidc.com/Linux/2017-06/144732.htm
    
 127.0.1.1 to 0.0.0.0:10020 failed on connection exception:
    hadoop的historyserver服务没有启动:https://blog.csdn.net/u014662563/article/details/72356417
+   https://blog.csdn.net/zhouyan8603/article/details/47398245
    sbin/mr-jobhistory-daemon.sh start historyserver
    

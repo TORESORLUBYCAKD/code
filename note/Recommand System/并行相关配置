@@ -20,3 +20,8 @@ Mahout协同过滤算法源码分析(并行化ALS_WR教程)：https://blog.csdn.
 
 如何根据configure.ac和Makefile.am为开源代码产生当前平台的Makefile:
 https://www.cnblogs.com/lidabo/p/7269077.html
+
+关于对‘pthread_create’未定义的引用解决方法:
+https://blog.csdn.net/sun_z_x/article/details/12307955?locationNum=15&fps=1
+https://blog.csdn.net/yuhan61659/article/details/81293960
+

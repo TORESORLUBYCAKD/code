@@ -15,3 +15,5 @@ Ubuntu 16.04安装JDK: https://www.linuxidc.com/Linux/2017-06/144732.htm
    https://blog.csdn.net/zhouyan8603/article/details/47398245
    sbin/mr-jobhistory-daemon.sh start historyserver
    
+hdfs 文件系统命令操作: https://www.cnblogs.com/newcolor/p/8194016.html
+Mahout协同过滤算法源码分析(并行化ALS_WR教程)：https://blog.csdn.net/fansy1990/article/details/12259975

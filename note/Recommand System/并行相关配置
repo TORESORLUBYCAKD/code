@@ -41,3 +41,6 @@ https://blog.csdn.net/ZuoShifan/article/details/79685125?utm_source=blogxgwz3
 
 ubuntu环境下Pytorch安装:
 https://blog.csdn.net/sparkexpert/article/details/77675581
+
+pip is showing error 'lsb_release -a' returned non-zero exit status 1:
+https://stackoverflow.com/questions/44967202/pip-is-showing-error-lsb-release-a-returned-non-zero-exit-status-1

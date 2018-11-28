@@ -36,6 +36,11 @@ https://www.cnblogs.com/wmr95/articles/7768492.html
 如何更改Ubuntu 16.04 默认Python版本方法:
 http://www.cnblogs.com/confessionlouis/p/9759639.html
 
+ubuntu16.04安装配置mpich2:
+https://blog.csdn.net/baidu_34045013/article/details/78237842
+mpiexec_logon01: cannot connect to local mpd (/tmp/mpd2.console_ycai):
+https://blog.csdn.net/tsaiyong_ahnselina/article/details/17754571
+
 安装和使用 mpi4py:
 https://blog.csdn.net/ZuoShifan/article/details/79685125?utm_source=blogxgwz3
 

@@ -62,3 +62,5 @@ http://www.cppblog.com/zhangyq/archive/2011/01/17/138670.html
 Ubuntu16.04安装Slurm:
 https://www.jianshu.com/p/4526ab23c81e
 https://blog.csdn.net/envy13/article/details/77977576?locationNum=6&fps=1
+slurmd fails to start：
+https://stackoverflow.com/questions/46966876/installing-emulating-slurm-on-an-ubuntu-16-04-desktop-slurmd-fails-to-start

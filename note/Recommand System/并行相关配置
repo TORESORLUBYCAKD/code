@@ -55,6 +55,10 @@ https://stackoverflow.com/questions/44967202/pip-is-showing-error-lsb-release-a-
 对pthread_create未定义的引用:
 https://blog.csdn.net/csdn_kou/article/details/81148268
 
+linux下安装配置intel的tbb:
+https://github.com/01org/tbb/blob/master/download.md
+http://www.cppblog.com/zhangyq/archive/2011/01/17/138670.html
+
 Ubuntu16.04安装Slurm:
 https://www.jianshu.com/p/4526ab23c81e
 https://blog.csdn.net/envy13/article/details/77977576?locationNum=6&fps=1

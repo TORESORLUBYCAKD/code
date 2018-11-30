@@ -55,7 +55,7 @@ https://stackoverflow.com/questions/44967202/pip-is-showing-error-lsb-release-a-
 对pthread_create未定义的引用:
 https://blog.csdn.net/csdn_kou/article/details/81148268
 
-linux下安装配置intel的tbb:
+linux下安装配置intel的tbb:(还需要sudo apt-get install libtbb-dev)
 https://github.com/01org/tbb/blob/master/download.md
 http://www.cppblog.com/zhangyq/archive/2011/01/17/138670.html
 

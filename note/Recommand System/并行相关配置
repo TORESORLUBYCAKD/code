@@ -64,3 +64,7 @@ https://www.jianshu.com/p/4526ab23c81e
 https://blog.csdn.net/envy13/article/details/77977576?locationNum=6&fps=1
 slurmd fails to start：
 https://stackoverflow.com/questions/46966876/installing-emulating-slurm-on-an-ubuntu-16-04-desktop-slurmd-fails-to-start
+
+Spark伪分布式部署并使用pyspark :
+https://dxysun.com/2018/07/09/sparkForLocalhostPython/
+http://www.linuxdiyf.com/linux/26857.html

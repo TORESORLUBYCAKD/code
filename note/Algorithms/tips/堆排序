@@ -1,0 +1,49 @@
+#include<cstdio>
+#include<algorithm>
+using namespace std;
+int n,k;
+int a[500010];
+void adjust(int start,int n){
+    int pos=start;
+    int child=start*2+1;
+    int temp=a[pos];
+    while(child<n){
+        if((child<n-1)&&(a[child+1]>a[child])) child++;
+        if(temp<a[child]){
+            a[pos]=a[child];
+            pos=child;
+            child=child*2+1;
+        }else{
+            break;
+        }
+    }
+    a[pos]=temp;
+}
+void heapsort(int n){
+    for(int i=n/2-1;i>=0;i--){
+        adjust(i,n);
+    }
+    for(int i=n-1;i>0;i--){
+            int temp=a[0];
+            a[0]=a[i];
+            a[i]=temp;
+            adjust(0,i);
+    }
+}
+int main(){
+    scanf("%d%d",&n,&k);
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    heapsort(n);
+    if(n<k) k=n;
+    int pos=0,cnt=0;
+    while(cnt<k){
+        if(a[pos]==a[pos+1]){
+            pos++;continue;
+        }
+        printf("%d ",a[pos]);
+        pos++;
+        cnt++;
+    }printf("\n");
+}

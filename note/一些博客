@@ -22,4 +22,5 @@ Hadoop2.6下安装Hive： https://blog.csdn.net/u014591781/article/details/52895
 https://blog.csdn.net/Realoyou/article/details/79145370
 java.net.URISyntaxException when starting HIVE
 https://stackoverflow.com/questions/27099898/java-net-urisyntaxexception-when-starting-hive
-
+CentOS6.5 安装Spark集群：
+https://www.cnblogs.com/hunttown/p/5500813.html

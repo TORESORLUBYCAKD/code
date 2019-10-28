@@ -17,3 +17,9 @@ C调试方法之--------Gprofile:https://www.cnblogs.com/myyan/p/4235362.html
 Mysql中联合索引的最左匹配原则: https://www.cnblogs.com/wangkaihua/p/10220462.html
 Hadoop 安装和配置集群(3节点): http://tracefact.net/tech/075.html
 Hadoop集群完全分布式搭建教程-CentOS: https://blog.csdn.net/zhshulin/article/details/50413240
+Hadoop2.6下安装Hive： https://blog.csdn.net/u014591781/article/details/52895176
+启动hive报错：("com.mysql.jdbc.Driver") was not found in the CLASSPATH
+https://blog.csdn.net/Realoyou/article/details/79145370
+java.net.URISyntaxException when starting HIVE
+https://stackoverflow.com/questions/27099898/java-net-urisyntaxexception-when-starting-hive
+
